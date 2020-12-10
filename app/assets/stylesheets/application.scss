@@ -1,0 +1,13 @@
+@import "bootstrap";
+
+.navbar-brand {
+  letter-spacing: 2px;
+}
+
+.search-image {
+  margin-top: 120px;
+}
+
+.movies-card + .movies-card {
+  margin-top: 5px;
+}
