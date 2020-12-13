@@ -62,6 +62,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # app dependencies
+gem 'bootstrap', '~> 5.0.0.alpha3'
 gem 'faraday', '~> 1.1.0'
 gem 'faraday_middleware', '~> 1.0.0'
-gem 'bootstrap', '~> 5.0.0.alpha3'
+gem 'rails_param', '~> 0.11.0'
+gem 'rubocop', '~> 1.6.1'

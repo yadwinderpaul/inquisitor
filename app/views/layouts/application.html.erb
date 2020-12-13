@@ -10,6 +10,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render partial: "nav" %>
+    <div class="container p-4">
+      <%= yield %>
+    </div>
   </body>
 </html>

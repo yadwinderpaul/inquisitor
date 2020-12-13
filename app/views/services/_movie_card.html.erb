@@ -1,0 +1,13 @@
+<div class="card movies-card">
+  <div class="card-body">
+    <h5 class="card-title"><%= movie['title'] %></h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <strong>Year:</strong> <%= movie['year'] %>
+    </li>
+    <li class="list-group-item">
+      <strong>Format:</strong> <%= movie['type'].capitalize %>
+    </li>
+  </ul>
+</div>
