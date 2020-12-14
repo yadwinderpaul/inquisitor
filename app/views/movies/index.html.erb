@@ -23,48 +23,7 @@
           </div>
         <% else %>
           <div class="col-24">
-            <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-center">
-                <li class="page-item <%= 'disabled' if @pagination[:current_page] == 1 %>">
-                  <%= link_to '<span aria-hidden="true">&laquo;</span>'.html_safe,
-                        url_for(query: @query, page: @pagination[:current_page] - 1),
-                        class: 'page-link' %>
-                </li>
-                <!-- link for first page, if current_page > 2  -->
-                <% if @pagination[:current_page] > 2 %>
-                  <li class="page-item">
-                    <%= link_to 1,
-                      url_for(query: @query, page: 1),
-                      class: 'page-link' %>
-                  </li>
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                  </li>
-                <% end %>
-                <!-- link for current page -->
-                <li class="page-item active">
-                  <%= link_to @pagination[:current_page],
-                      url_for(query: @query, page: @pagination[:current_page]),
-                      class: 'page-link' %>
-                </li>
-                <!-- link for last page, if total_pages - current_page > 2  -->
-                <% if @pagination[:total_pages] - @pagination[:current_page] > 1 %>
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#">...</a>
-                  </li>
-                  <li class="page-item">
-                    <%= link_to @pagination[:total_pages],
-                      url_for(query: @query, page: @pagination[:total_pages]),
-                      class: 'page-link' %>
-                  </li>
-                <% end %>
-                <li class="page-item <%= 'disabled' unless @pagination[:current_page] < @pagination[:total_pages] %>">
-                  <%= link_to '<span aria-hidden="true">&raquo;</span>'.html_safe,
-                    url_for(query: @query, page: @pagination[:current_page] + 1),
-                    class: 'page-link' %>
-                </li>
-              </ul>
-            </nav>
+            <%= render partial: "services/pagination" %>
           </div>
           <% @collection.each do |value| %>
           <div class="col-24">

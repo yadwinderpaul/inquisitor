@@ -7,6 +7,7 @@ Inquisitor is an app for calling external APIs and display results to the user.
 ### Run locally
 - git clone the repo
 - `bundle install`
+- create `config/master.key` with contents provided by the repo owner
 - `rails s` to start the webserver
 - visit http://localhost:3000/
 

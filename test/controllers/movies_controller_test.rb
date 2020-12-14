@@ -1,9 +1,15 @@
 require 'test_helper'
 
 class MoviesControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
-    get movies_index_url
+  fixtures :omdb
+
+  test 'should successfully show index page' do
+    get '/movies'
     assert_response :success
   end
 
+  test 'should have movies form' do
+    get '/movies'
+    assert_select 'form'
+  end
 end
